@@ -14,3 +14,11 @@ const colors = {
   reset: "\x1b[0m",
   blue: "\x1b[94m",
   magenta: "\x1b[95m"
+const logger = {
+  info: (msg) => console.log(`${colors.green}[✓] ${msg}${colors.reset}`),
+  warn: (msg) => console.log(`${colors.yellow}[⚠] ${msg}${colors.reset}`),
+  error: (msg) => console.log(`${colors.red}[✗] ${msg}${colors.reset}`),
+  success: (msg) => console.log(`${colors.green}[✅] ${msg}${colors.reset}`),
+  loading: (msg) => console.log(`${colors.cyan}[⟳] ${msg}${colors.reset}`),
+  step: (msg) => console.log(`${colors.white}${colors.bold}[➤] ${msg}${colors.reset}`),
+  banner: () => {
